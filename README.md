@@ -20,7 +20,7 @@ Sebuah game suwit Jawa klasik (Gajah, Orang, Semut) yang dibuat dengan antarmuka
 
 1.  **Clone repository ini:**
     ```bash
-    git clone [https://github.com/nicoujul4/game-suwit-jawa.git](https://github.com/nicoujul4/game-suwit-jawa.git)
+    git clone https://github.com/nicoujul4/game-suwit-jawa.git
     ```
 2.  **Masuk ke folder proyek:**
     ```bash
