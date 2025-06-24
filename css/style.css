@@ -1,0 +1,204 @@
+/* --- CSS Reset & Basic Setup --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #1a1a2e; /* Warna latar belakang gelap kebiruan */
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --- Main Container --- */
+.container {
+  background-color: #16213e; /* Warna kontainer sedikit lebih terang */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #00c896; /* Warna aksen hijau toska */
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin-bottom: 30px;
+}
+
+/* --- Scoreboard --- */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.score h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.score p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* --- Result Area --- */
+.result-area {
+  margin: 30px 0;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* --- Choices Area --- */
+.choices {
+  display: flex;
+  justify-content: space-between; /* Mengatur jarak antar kolom */
+  align-items: center; /* Membuat semua kolom sejajar di tengah secara vertikal */
+  margin-top: 20px;
+}
+
+.player-side,
+.computer-side {
+  flex: 1; /* Membuat kedua kolom memiliki lebar yang sama */
+  display: flex; /* Kunci perbaikan: Menjadikan kolom sebagai flex container */
+  flex-direction: column; /* Mengatur item di dalamnya (judul & gambar) tersusun ke bawah */
+  align-items: center; /* Membuat item di dalamnya (judul & gambar) rata tengah */
+}
+
+.vs {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00c896;
+  margin: 0 1rem; /* Memberi sedikit jarak horizontal */
+}
+
+h3 {
+  margin-bottom: 15px;
+  color: #e0e0e0;
+}
+
+.player-choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.choice {
+  width: 100px;
+  height: 100px;
+  background-color: #1a1a2e;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.choice:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00c896;
+}
+
+.computer-choice-display img {
+  width: 100px;
+  height: 100px;
+  background-color: #1a1a2e;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+/* --- Dynamic Classes (dibuat oleh JS) --- */
+.result-text.win {
+  background-color: #00c896;
+  color: #16213e;
+}
+
+.result-text.lose {
+  background-color: #e94560;
+  color: #ffffff;
+}
+
+.result-text.draw {
+  background-color: #f0a500;
+  color: #16213e;
+}
+
+.selected {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00c896;
+  border: 3px solid #00c896;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 30px;
+}
+
+#reset-button {
+  background-color: #e94560;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#reset-button:hover {
+  background-color: #c4324c;
+}
+
+/* --- Media Queries untuk Mobile --- */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  .choices {
+    flex-direction: column;
+  }
+  .vs {
+    margin: 20px 0;
+    transform: rotate(90deg);
+  }
+  .choice {
+    width: 80px;
+    height: 80px;
+  }
+  .computer-choice-display img {
+    width: 80px;
+    height: 80px;
+  }
+}
