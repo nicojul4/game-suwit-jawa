@@ -29,4 +29,4 @@ Sebuah game suwit Jawa klasik (Gajah, Orang, Semut) yang dibuat dengan antarmuka
 3.  **Buka file `index.html`** di browser favorit Anda.
 
 ---
-Dibuat oleh [nicoujul4](https://github.com/nicoujul4).
+Dibuat oleh [nicojul4](https://github.com/nicojul4).
